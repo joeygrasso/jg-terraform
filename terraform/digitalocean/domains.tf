@@ -6,12 +6,12 @@ resource "digitalocean_domain" "cpunation_net" {
     name = "cpunation.net"
 }
 
-resource "digitalocean_domain" "glynbrook_com" {
-    name = "glynbrook.com"
-}
-
 resource "digitalocean_domain" "fivepointbaseball_com" {
     name = "fivepointbaseball.com"
+}
+
+resource "digitalocean_domain" "glynbrook_com" {
+    name = "glynbrook.com"
 }
 
 resource "digitalocean_domain" "grandslamgrasso_com" {
@@ -20,6 +20,10 @@ resource "digitalocean_domain" "grandslamgrasso_com" {
 
 resource "digitalocean_domain" "gras_so" {
     name = "gras.so"
+}
+
+resource "digitalocean_domain" "joeygrasso_com" {
+    name = "joeygrasso.com"
 }
 
 resource "digitalocean_domain" "tuckertackle_com" {

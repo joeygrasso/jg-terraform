@@ -267,6 +267,83 @@ resource "digitalocean_record" "ns3_gras_so" {
 }
 
 ##########
+# joeygrasso.com
+##########
+resource "digitalocean_record" "www_joeygrasso_com" {
+  domain = digitalocean_domain.joeygrasso_com.id
+  type   = "A"
+  name   = "www"
+  value  = digitalocean_reserved_ip.web-nyc1-cpunation-com-reserved-ip.ip_address
+}
+
+resource "digitalocean_record" "joeygrasso_com" {
+  domain = digitalocean_domain.joeygrasso_com.id
+  type   = "A"
+  name   = "@"
+  value  = digitalocean_reserved_ip.web-nyc1-cpunation-com-reserved-ip.ip_address
+}
+
+resource "digitalocean_record" "ns1_joeygrasso_com" {
+  domain = digitalocean_domain.joeygrasso_com.id
+  type   = "NS"
+  name   = "@"
+  value  = "ns1.digitalocean.com."
+}
+
+resource "digitalocean_record" "ns2_joeygrasso_com" {
+  domain = digitalocean_domain.joeygrasso_com.id
+  type   = "NS"
+  name   = "@"
+  value  = "ns2.digitalocean.com."
+}
+
+resource "digitalocean_record" "ns3_joeygrasso_com" {
+  domain = digitalocean_domain.joeygrasso_com.id
+  type   = "NS"
+  name   = "@"
+  value  = "ns3.digitalocean.com."
+}
+
+resource "digitalocean_record" "mx_1_joeygrasso_com" {
+   domain = digitalocean_domain.joeygrasso_com.id
+   type   = "MX"
+   name   = "@"
+   priority = "10"
+   value  = "in1-smtp.messagingengine.com."
+
+}
+
+resource "digitalocean_record" "mx_2_joeygrasso_com" {
+   domain = digitalocean_domain.joeygrasso_com.id
+   type   = "MX"
+   name   = "@"
+   priority = "20"
+   value  = "in2-smtp.messagingengine.com."
+}
+
+resource "digitalocean_record" "mesmtp_txt_joeygrasso_com" {
+   domain = digitalocean_domain.joeygrasso_com.id
+   type = "TXT"
+   name = "mesmtp._domainkey"
+   value = "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCvQT7BpTzs8iB8Ao1/g5p+cest3+CM8uPve5v0AnkCrcb8kHv/brUDEWxQPYAS7Ip/1QUlHmFfs8Nx7rAh0xW6fjjqMnA844vfAItRe6j+IHtDvOrXKAFfAocGFPSxjcqwZJW0MH3jj2Jkd+/03XRZtbJELhRz0PsNI+RK0wSVBwIDAQAB"
+
+}
+
+resource "digitalocean_record" "txt_joeygrasso_com" {
+   domain = digitalocean_domain.joeygrasso_com.id
+   type = "TXT"
+   name = "@"
+   value = "v=spf1 include:spf.messagingengine.com ?all"
+}
+
+resource "digitalocean_record" "aws_joeygrasso_com" {
+  domain = digitalocean_domain.joeygrasso_com.id
+  type   = "A"
+  name   = "aws"
+  value  = digitalocean_reserved_ip.web-nyc1-cpunation-com-reserved-ip.ip_address
+}
+
+##########
 # tuckertackle.com
 ##########
 resource "digitalocean_record" "www_tuckertackle_com" {
