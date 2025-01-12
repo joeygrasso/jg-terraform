@@ -1,3 +1,11 @@
+resource "digitalocean_domain" "cpunation_com" {
+    name = "cpunation.com"
+}
+
+resource "digitalocean_domain" "cpunation_net" {
+    name = "cpunation.net"
+}
+
 resource "digitalocean_domain" "glynbrook_com" {
     name = "glynbrook.com"
 }
