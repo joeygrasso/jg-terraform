@@ -265,3 +265,58 @@ resource "digitalocean_record" "ns3_gras_so" {
   name   = "@"
   value  = "ns3.digitalocean.com."
 }
+
+##########
+# tuckertackle.com
+##########
+resource "digitalocean_record" "www_tuckertackle_com" {
+  domain = digitalocean_domain.tuckertackle_com.id
+  type   = "CNAME"
+  name   = "www"
+  value  = "shops.myshopify.com."
+}
+
+resource "digitalocean_record" "tuckertackle_com" {
+  domain = digitalocean_domain.tuckertackle_com.id
+  type   = "A"
+  name   = "@"
+  value  = "23.227.38.65"
+}
+
+resource "digitalocean_record" "ns1_tuckertackle_com" {
+  domain = digitalocean_domain.tuckertackle_com.id
+  type   = "NS"
+  name   = "@"
+  value  = "ns1.digitalocean.com."
+}
+
+resource "digitalocean_record" "ns2_tuckertackle_com" {
+  domain = digitalocean_domain.tuckertackle_com.id
+  type   = "NS"
+  name   = "@"
+  value  = "ns2.digitalocean.com."
+}
+
+resource "digitalocean_record" "ns3_tuckertackle_com" {
+  domain = digitalocean_domain.tuckertackle_com.id
+  type   = "NS"
+  name   = "@"
+  value  = "ns3.digitalocean.com."
+}
+
+resource "digitalocean_record" "mx_1_tuckertackle_com" {
+   domain = digitalocean_domain.tuckertackle_com.id
+   type   = "MX"
+   name   = "@"
+   priority = "10"
+   value  = "in1-smtp.messagingengine.com."
+
+}
+
+resource "digitalocean_record" "mx_2_tuckertackle_com" {
+   domain = digitalocean_domain.tuckertackle_com.id
+   type   = "MX"
+   name   = "@"
+   priority = "20"
+   value  = "in2-smtp.messagingengine.com."
+}
