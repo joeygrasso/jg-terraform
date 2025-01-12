@@ -21,3 +21,7 @@ resource "digitalocean_domain" "grandslamgrasso_com" {
 resource "digitalocean_domain" "gras_so" {
     name = "gras.so"
 }
+
+resource "digitalocean_domain" "tuckertackle_com" {
+    name = "tuckertackle.com"
+}
