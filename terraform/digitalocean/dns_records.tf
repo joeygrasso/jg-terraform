@@ -325,7 +325,7 @@ resource "digitalocean_record" "mesmtp_txt_joeygrasso_com" {
    domain = digitalocean_domain.joeygrasso_com.id
    type = "TXT"
    name = "mesmtp._domainkey"
-   value = "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC+HbR/kBBVEFZ/hup5a3ecjE+dqIXK+EokrIsfTX9Prkubf11xclpF/V5QQITru/ZWWV/8FdGJl7jxeraZw0Nacy9AWhwAPFrJ/j+Int0mxMKMpk9B0MaC8Gr2It9y7416wXgT+sqIVhz5d6qWOIC3g+W5/aDVFyKhzP1YzNPaZwIDAQAB"
+   value = "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCvQT7BpTzs8iB8Ao1/g5p+cest3+CM8uPve5v0AnkCrcb8kHv/brUDEWxQPYAS7Ip/1QUlHmFfs8Nx7rAh0xW6fjjqMnA844vfAItRe6j+IHtDvOrXKAFfAocGFPSxjcqwZJW0MH3jj2Jkd+/03XRZtbJELhRz0PsNI+RK0wSVBwIDAQAB"
 
 }
 
